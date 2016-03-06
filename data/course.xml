@@ -123,7 +123,7 @@ and open the template in the editor.
     <course id="blaw3600">
         <info>
             <day type="thu">Thursday</day>
-            <time block="1430">1430</time>
+            <time block="1330">1330</time>
             <courseno type="lab">BLAW3600</courseno>
             <instructor>Catherine Ryan</instructor>
             <room>sw3-4725</room> 
