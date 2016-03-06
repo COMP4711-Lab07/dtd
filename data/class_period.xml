@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+<!DOCTYPE classperiod SYSTEM 'schedule.dtd'>
+
+<classperiod>
+    <period time="830">
+        <info>
+            <day type="mon"></day>
+            <time block="830">to 11:20</time>
+            <courseno type="lab">COMP4932</courseno>
+            <instructor>Dennis Richards</instructor>  
+            <room>SE12-308</room>
+        </info>  
+        
+        <info>
+            <day type="wed"></day>
+            <time block="830">to 10:30</time>
+            <courseno type="lab">COMP4735</courseno>
+            <instructor>Matthew Linder</instructor>
+            <room>se12-308</room> 
+        </info>
+        
+        <info>
+            <day type="thu"></day>
+            <time block="830">to 10:30</time>
+            <courseno type="lec">BLAW3600</courseno>
+            <instructor>Catherine Ryan</instructor>
+            <room>sw5-1840</room> 
+        </info>
+    </period>
+    
+    
+    <period time="930">
+        <info>
+            <day type="tue">Tuesday</day>
+            <time block="930">to 11:20</time>
+            <courseno type="lab">COMP4560</courseno>
+            <instructor>Brenda Fine</instructor>
+            <room>SE12-320</room> 
+        </info>
+    </period>
+    
+    
+    <period time="1030">
+        <info>
+            <day type="wed">Wednesday</day>
+            <time block="1030">to 11:20</time>
+            <courseno type="lec" >COMP4995</courseno>
+            <instructor>Dennis Richards</instructor>
+            <room>se12-308</room> 
+        </info>
+    </period>
+    
+    
+    <period time="1130">
+        <info>
+            <day type="mon">Monday</day>
+            <time block="1130">to 12:30</time>
+            <courseno type="lec">COMP4735</courseno>
+            <instructor>Mirela Gutica</instructor>
+            <room>sw1-1205</room> 
+        </info>
+        
+        <info>
+            <day type="tue">Tuesday</day>
+            <time block="1130">to 12:30</time>
+            <courseno type="lec">COMP4560</courseno>
+            <instructor>Brenda Fine</instructor>
+            <room>sw5-1850</room> 
+        </info>
+        
+        <info>
+            <day type="wed">Wednesday</day>
+            <time block="1130">to 12:20</time>
+            <courseno type="lab" >COMP4995</courseno>
+            <instructor>Dennis Richards</instructor>
+            <room>se12-308</room> 
+        </info>
+    
+        <info>
+            <day type="thu">Thursday</day>
+            <time block="1130">to 12:20</time>
+            <courseno type="lec">COMP4735</courseno>
+            <instructor>Mirela Gutica</instructor>
+            <room>sw3-1710</room> 
+        </info>
+    </period>
+    
+    
+    <period time="1230">
+        <info>
+            <day type="fri">Friday</day>
+            <time block="1230">to 13:20</time>
+            <courseno type="lec">COMP4560</courseno>
+            <instructor>Brenda Fine</instructor>
+            <room>sw3-1750</room> 
+        </info>
+    </period>
+    
+    
+    <period time="1330">
+        <info>
+            <day type="wed">Wednesday</day>
+            <time block="1330">to 14:30</time>
+            <courseno type="lec">COMP4735</courseno>
+            <instructor>Mirela Gutica</instructor>
+            <room>sw1-1205</room> 
+        </info>
+        
+        <info>
+            <day type="thu">Thursday</day>
+            <time block="1330">to 15:30</time>
+            <courseno type="lab">BLAW3600</courseno>
+            <instructor>Catherine Ryan</instructor>
+            <room>sw3-4725</room> 
+        </info>
+    </period>
+    
+    
+    <period time="1430">
+        <info>
+            <day type="mon">Monday</day>
+            <time block="1430">to 17:20</time>
+            <courseno type="lab">COMP4995</courseno>
+            <instructor>Dennis Richards</instructor>
+            <room>se12-308</room> 
+        </info>
+        
+        <info>
+            <day type="tue">Tuesday</day>
+            <time block="1430">to 15:20</time>
+            <courseno type="lec">COMP4711</courseno>
+            <instructor>James Perry</instructor>
+            <room>sw5-1840</room> 
+        </info>
+    </period>
+    
+    
+    <period time="1530">
+        <info>
+            <day type="tue">Tuesday</day>
+            <time block="1530">to 17:20</time>
+            <courseno type="lec" >COMP4932</courseno>
+            <instructor>Dennis Richards</instructor>
+            <room>se12-308</room> 
+        </info>
+        
+        <info>
+            <day type="thu">Thursday</day>
+            <time block="1530">to 17:20</time>
+            <courseno type="lab">COMP4711</courseno>
+            <instructor>James Perry</instructor>
+            <room>se12-310</room> 
+        </info>
+    </period>
+        
+</classperiod>

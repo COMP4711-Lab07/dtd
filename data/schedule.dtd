@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+<!--
+    TODO define vocabulary identification data
+    PUBLIC ID  : -//vendor//vocabulary//EN
+    SYSTEM ID  : http://server/path/__NAME__
+-->
+
+<!-- A schedule defines the day, time, course, instructor, and room  -->
+<!ELEMENT schedule (daysinweek, classperiod, courses)>
+
+<!ELEMENT daysinweek (days+)>
+<!ELEMENT days (info+)>
+<!ATTLIST days
+    name    (mon|tue|wed|thu|fri|sat|sun) #REQUIRED
+>
+
+
+<!ELEMENT courses (course+)>
+<!ELEMENT course (info+)>
+<!ATTLIST course 
+    id  (comp4932|comp4735|comp4995|comp4560|comp4711|blaw3600) #REQUIRED
+>
+
+<!ELEMENT classperiod (period+)>
+<!ELEMENT period (info+)>
+<!ATTLIST period 
+    time  (830|930|1030|1130|1230|1330|1430|1530|1630|1730) #REQUIRED
+>
+
+<!ELEMENT info (day*, time, courseno, instructor, room)>
+
+<!--A day determines the day of the week -->
+<!ELEMENT day (#PCDATA)>
+<!ATTLIST day
+    type    (mon|tue|wed|thu|fri|sat|sun) #REQUIRED
+>
+
+<!-- Time is flexible and can be set as any time of day -->
+<!ELEMENT time (#PCDATA)>
+<!ATTLIST time
+    block   (830|930|1030|1130|1230|1330|1430|1530|1630) #REQUIRED
+>
+
+<!-- CourseNo is predetermined and unique for all courses -->
+<!ELEMENT courseno (#PCDATA)>
+<!ATTLIST courseno
+    type (lab|lec) #REQUIRED
+>
+
+<!-- Instructors teaching courses. Can be same or different for various classes -->
+<!ELEMENT instructor (#PCDATA)>
+
+<!-- Room where the lecture takes place. Defined as building-roomNo -->
+<!ELEMENT room (#PCDATA)>

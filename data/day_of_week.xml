@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+<!DOCTYPE daysinweek SYSTEM 'schedule.dtd'>
+
+
+<daysinweek>
+    <days name="mon"> 
+        <info>
+            <time block="830">8:30 to 11:20</time>
+            <courseno type="lab">COMP4932</courseno>
+            <instructor>Dennis Richards</instructor>  
+            <room>SE12-308</room>
+        </info>
+
+        <info>
+            <time block="1130">11:30 to 12:30</time>
+            <courseno type="lec">COMP4735</courseno>
+            <instructor>Mirela Gutica</instructor>  
+            <room>SW1-1205</room>
+        </info>
+
+        <info>
+            <time block="1430">14:30 to 17:20</time>
+            <courseno type="lab">COMP4995 Lab</courseno>
+            <instructor>Dennis Richards</instructor>  
+            <room>SE12-308</room>
+        </info>
+    </days>
+    
+    
+    <days name="tue">
+        <info>
+            <time block="930">930</time>
+            <courseno type="lab">COMP4560</courseno>
+            <instructor>Brenda Fine</instructor>
+            <room>se12-320</room> 
+        </info>
+        
+        <info>
+            <time block="1130">1130</time>
+            <courseno type="lec">COMP4560</courseno>
+            <instructor>Brenda Fine</instructor>
+            <room>sw5-1850</room> 
+        </info>
+        
+        <info>
+            <time block="1430">1430</time>
+            <courseno type="lec">COMP4711</courseno>
+            <instructor>James Perry</instructor>
+            <room>sw5-1840</room> 
+        </info>
+        
+        <info>
+          <time block="1530">1530</time>
+          <courseno type="lec" >COMP4932</courseno>
+          <instructor>Dennis Richards</instructor>
+          <room>se12-308</room> 
+        </info>   
+    </days>
+    
+    
+    <days name="wed">
+        <info>
+            <time block="830">830</time>
+            <courseno type="lab">COMP4735</courseno>
+            <instructor>Matthew Linder</instructor>
+            <room>se12-308</room> 
+        </info>
+        
+        <info>
+            <time block="1030">1030</time>
+            <courseno type="lec" >COMP4995</courseno>
+            <instructor>Dennis Richards</instructor>
+            <room>se12-308</room> 
+        </info>
+        
+        <info>
+            <time block="1130">1130</time>
+            <courseno type="lab" >COMP4995</courseno>
+            <instructor>Dennis Richards</instructor>
+            <room>se12-308</room> 
+        </info>
+        
+        <info>
+            <time block="1330">1330</time>
+            <courseno type="lec">COMP4735</courseno>
+            <instructor>Mirela Gutica</instructor>
+            <room>sw1-1205</room> 
+        </info>
+    </days>
+    
+    
+    <days name="thu">
+        <info>
+            <time block="1130">1130</time>
+            <courseno type="lec">COMP4735</courseno>
+            <instructor>Mirela Gutica</instructor>
+            <room>sw3-1710</room> 
+        </info>
+        
+        <info>
+            <time block="1430">1430</time>
+            <courseno type="lab">BLAW3600</courseno>
+            <instructor>Catherine Ryan</instructor>
+            <room>sw3-4725</room> 
+        </info>
+        
+        <info>
+            <time block="1530">1530</time>
+            <courseno type="lab">COMP4711</courseno>
+            <instructor>James Perry</instructor>
+            <room>se12-310</room> 
+        </info>
+        
+        
+    </days>
+    
+    
+    <days name="fri">
+        <info>
+            <time block="830">830</time>
+            <courseno type="lec">BLAW3600</courseno>
+            <instructor>Catherine Ryan</instructor>
+            <room>sw5-1840</room> 
+        </info>
+        
+        <info>
+            <time block="1230">1230</time>
+            <courseno type="lec">COMP4560</courseno>
+            <instructor>Brenda Fine</instructor>
+            <room>sw3-1750</room> 
+        </info>
+    </days>
+    
+   
+    
+</daysinweek>
