@@ -5,33 +5,131 @@ To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
 
-<!DOCTYPE course SYSTEM 'schedule.dtd'>
-<course type="lab" id="comp4932">
-    <info>
-        <day type="mon">Monday</day>
-        <time block="830">830</time>
-        <courseno>COMP4932</courseno>
-        <instructor>Dennis Richards</instructor>
-        <room>se12-308</room> 
-    </info>
-</course>
+<!DOCTYPE courses SYSTEM 'schedule.dtd'>
+<courses>
+    <course id="comp4932">
+        <info>
+            <day type="mon">Monday</day>
+            <time block="830">830</time>
+            <courseno type="lab" >COMP4932</courseno>
+            <instructor>Dennis Richards</instructor>
+            <room>se12-308</room> 
+        </info>
+        <info>
+            <day type="tue">Tuesday</day>
+            <time block="1530">3:30</time>
+            <courseno type="lec" >COMP4932</courseno>
+            <instructor>Dennis Richards</instructor>
+            <room>se12-308</room> 
+        </info>
+    </course>
+    
+    <course id="comp4995">
+        <info>
+            <day type="wed">Wednesday</day>
+            <time block="1030">1030</time>
+            <courseno type="lec" >COMP4995</courseno>
+            <instructor>Dennis Richards</instructor>
+            <room>se12-308</room> 
+        </info>
+        <info>
+            <day type="wed">Wednesday</day>
+            <time block="1130">1130</time>
+            <courseno type="lab" >COMP4995</courseno>
+            <instructor>Dennis Richards</instructor>
+            <room>se12-308</room> 
+        </info>
+    </course>
 
-<course type="lec" id="comp4735">
-    <info>
-        <day type="mon">Monday</day>
-        <time block="830">1130</time>
-        <courseno>COMP4735</courseno>
-        <instructor>Mirela Gutica</instructor>
-        <room>sw1-1205</room> 
-    </info>
-</course>
+    <course id="comp4735">
+        <info>
+            <day type="mon">Monday</day>
+            <time block="1130">1130</time>
+            <courseno type="lec">COMP4735</courseno>
+            <instructor>Mirela Gutica</instructor>
+            <room>sw1-1205</room> 
+        </info>
+        <info>
+            <day type="wed">Wednesday</day>
+            <time block="830">830</time>
+            <courseno type="lab">COMP4735</courseno>
+            <instructor>Matthew Linder</instructor>
+            <room>se12-308</room> 
+        </info>
+        <info>
+            <day type="wed">Wednesday</day>
+            <time block="1330">1330</time>
+            <courseno type="lec">COMP4735</courseno>
+            <instructor>Mirela Gutica</instructor>
+            <room>sw1-1205</room> 
+        </info>
+        <info>
+            <day type="thu">Thursday</day>
+            <time block="1130">1130</time>
+            <courseno type="lec">COMP4735</courseno>
+            <instructor>Mirela Gutica</instructor>
+            <room>sw3-1710</room> 
+        </info>
+    </course>
 
-<course type="lab" id="comp4995">
-    <info>
-        <day type="mon">Monday</day>
-        <time block="830">230</time>
-        <courseno>COMP4995</courseno>
-        <instructor>Dennis Richards</instructor>
-        <room>se12-308</room> 
-    </info>
-</course>
+    <course id="comp4995">
+        <info>
+            <day type="mon">Monday</day>
+            <time block="1430">230</time>
+            <courseno type="lab">COMP4995</courseno>
+            <instructor>Dennis Richards</instructor>
+            <room>se12-308</room> 
+        </info>
+    </course>
+    
+    <course id="comp4560">
+        <info>
+            <day type="tue">Tuesday</day>
+            <time block="930">930</time>
+            <courseno type="lab">COMP4560</courseno>
+            <instructor>Brenda Fine</instructor>
+            <room>se12-320</room> 
+        </info>
+        <info>
+            <day type="tue">Tuesday</day>
+            <time block="1130">1130</time>
+            <courseno type="lec">COMP4560</courseno>
+            <instructor>Brenda Fine</instructor>
+            <room>sw5-1850</room> 
+        </info>
+    </course>
+    
+    <course id="comp4711">
+        <info>
+            <day type="tue">Tuesday</day>
+            <time block="1430">230</time>
+            <courseno type="lec">COMP4711</courseno>
+            <instructor>James Perry</instructor>
+            <room>sw5-1840</room> 
+        </info>
+        <info>
+            <day type="thu">Thursday</day>
+            <time block="1530">1530</time>
+            <courseno type="lab">COMP4711</courseno>
+            <instructor>James Perry</instructor>
+            <room>se12-310</room> 
+        </info>
+    </course>
+    
+    <course id="blaw3600">
+        <info>
+            <day type="thu">Tuesday</day>
+            <time block="1430">1430</time>
+            <courseno type="lab">COMP4711</courseno>
+            <instructor>James Perry</instructor>
+            <room>sw5-1840</room> 
+        </info>
+        <info>
+            <day type="tue">Tuesday</day>
+            <time block="1530">1530</time>
+            <courseno type="lab">COMP4711</courseno>
+            <instructor>James Perry</instructor>
+            <room>se12-310</room> 
+        </info>
+    </course>
+</courses>
