@@ -16,13 +16,22 @@ and open the template in the editor.
     </info>
 </course>
 
-
 <course type="lec" id="comp4735">
     <info>
         <day type="mon">Monday</day>
-        <time block="830">830</time>
-        <courseno>COMP4932</courseno>
+        <time block="830">1130</time>
+        <courseno>COMP4735</courseno>
         <instructor>Mirela Gutica</instructor>
+        <room>sw1-1205</room> 
+    </info>
+</course>
+
+<course type="lab" id="comp4995">
+    <info>
+        <day type="mon">Monday</day>
+        <time block="830">230</time>
+        <courseno>COMP4995</courseno>
+        <instructor>Dennis Richards</instructor>
         <room>se12-308</room> 
     </info>
 </course>

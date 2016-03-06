@@ -17,7 +17,6 @@ and open the template in the editor.
 <!ELEMENT days (info)>
 <!ELEMENT course (info)>
 <!ATTLIST course 
-    type (lab|lec) #REQUIRED
     id  (comp4932|comp4735|comp4995|comp4560|comp4711|blaw3600) #REQUIRED
 >
 <!ELEMENT classperiod (info)>
@@ -38,6 +37,9 @@ and open the template in the editor.
 
 <!-- CourseNo is predetermined and unique for all courses -->
 <!ELEMENT courseno (#PCDATA)>
+<!ATTLIST
+    type (lab|lec) #REQUIRED
+>
 
 <!-- Instructors teaching courses. Can be same or different for various classes -->
 <!ELEMENT instructor (#PCDATA)>
