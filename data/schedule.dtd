@@ -15,7 +15,7 @@ and open the template in the editor.
 <!ELEMENT schedule (day+, time+, courseno, instructor+, room+)>
 <!ELEMENT dayofweek (time, courseno, room, instructor)>
 <!ELEMENT course (room, instructor, time, day)>
-<!ELEMENT classperiod(day, courseno, room, instructor)>
+<!ELEMENT classperiod (day, courseno, room, instructor)>
 
 <!--A day determines the day of the week -->
 <!ELEMENT day(#PCDATA)>
