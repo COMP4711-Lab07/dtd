@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+<!DOCTYPE course SYSTEM 'schedule.dtd'>
+<course type="lab" id="comp4932">
+    <info>
+        <day type="mon">Monday</day>
+        <time block="830">830</time>
+        <courseno>COMP4932</courseno>
+        <instructor>Dennis Richards</instructor>
+        <room>se12-308</room> 
+    </info>
+</course>
+
+
+<course type="lec" id="comp4735">
+    <info>
+        <day type="mon">Monday</day>
+        <time block="830">830</time>
+        <courseno>COMP4932</courseno>
+        <instructor>Mirela Gutica</instructor>
+        <room>se12-308</room> 
+    </info>
+</course>
