@@ -11,7 +11,26 @@ and open the template in the editor.
     SYSTEM ID  : http://server/path/__NAME__
 -->
 
-<!-- TODO define your own vocabulary/syntax. Example follows:  -->
-<!ELEMENT __ROOT__ ANY>
-<!ATTLIST __ROOT__ version CDATA #REQUIRED>
+<!-- A schedule defines the day, time, course, instructor, and room  -->
+<!ELEMENT Schedule (day+, time+, courseNo, instructor+, room+)>
 
+<!--A day determines the day of the week -->
+<!ELEMENT day(#PCDATA)>
+<!ATTLIST day
+    type    (u|m|t|w|t|f|s)
+>
+
+<!-- Time is flexible and can be set as any time of day -->
+<!ELEMENT time(#PCDATA)>
+
+<!-- CourseNo is predetermined and unique for all courses -->
+<!ELEMENT courseNo(#PCDATA)>
+<!ATTLIST courseNo
+    type    (lecture|lab)
+>
+
+<!-- Instructors teaching courses. Can be same or different for various classes -->
+<!ELEMENT instructor(#PCDATA)>
+
+<!-- Room where the lecture takes place. Defined as building-roomNo -->
+<!ELEMENT room(#PCDATA)>
