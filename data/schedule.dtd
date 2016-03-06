@@ -12,7 +12,10 @@ and open the template in the editor.
 -->
 
 <!-- A schedule defines the day, time, course, instructor, and room  -->
-<!ELEMENT schedule (day+, time+, courseNo, instructor+, room+)>
+<!ELEMENT schedule (day+, time+, courseno, instructor+, room+)>
+<!ELEMENT dayofweek (time, courseno, room, instructor)>
+<!ELEMENT course (room, instructor, time, day)>
+<!ELEMENT classperiod(day, courseno, room, instructor)>
 
 <!--A day determines the day of the week -->
 <!ELEMENT day(#PCDATA)>
@@ -24,8 +27,8 @@ and open the template in the editor.
 <!ELEMENT time(#PCDATA)>
 
 <!-- CourseNo is predetermined and unique for all courses -->
-<!ELEMENT courseNo(#PCDATA)>
-<!ATTLIST courseNo
+<!ELEMENT courseno(#PCDATA)>
+<!ATTLIST courseno
     type    (lecture|lab)
 >
 
