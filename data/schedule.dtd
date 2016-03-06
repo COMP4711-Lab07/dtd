@@ -18,22 +18,22 @@ and open the template in the editor.
 <!ELEMENT classperiod (day, courseno, room, instructor)>
 
 <!--A day determines the day of the week -->
-<!ELEMENT day(#PCDATA)>
+<!ELEMENT day (#PCDATA)>
 <!ATTLIST day
-    type    (u|m|t|w|t|f|s)
+    type    (m|t|w|t|f|s|su) "m"
 >
 
 <!-- Time is flexible and can be set as any time of day -->
-<!ELEMENT time(#PCDATA)>
+<!ELEMENT time (#PCDATA)>
 
 <!-- CourseNo is predetermined and unique for all courses -->
-<!ELEMENT courseno(#PCDATA)>
+<!ELEMENT courseno (#PCDATA)>
 <!ATTLIST courseno
-    type    (lecture|lab)
+    type    (lecture|lab) "lecture"
 >
 
 <!-- Instructors teaching courses. Can be same or different for various classes -->
-<!ELEMENT instructor(#PCDATA)>
+<!ELEMENT instructor (#PCDATA)>
 
 <!-- Room where the lecture takes place. Defined as building-roomNo -->
-<!ELEMENT room(#PCDATA)>
+<!ELEMENT room (#PCDATA)>
