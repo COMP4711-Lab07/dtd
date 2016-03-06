@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+
+<!DOCTYPE schedule SYSTEM 'schedule.dtd' [
+    <!ENTITY part1 SYSTEM 'day_of_week.xml'>
+    <!ENTITY part2 SYSTEM 'class_period.xml'>
+    <!ENTITY part3 SYSTEM 'course.xml'>
+]>
+
+<schedule>
+    &part1;
+    &part2;
+    &part3;
+</schedule>

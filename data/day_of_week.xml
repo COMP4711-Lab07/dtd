@@ -6,6 +6,8 @@ and open the template in the editor.
 -->
 
 <!DOCTYPE daysinweek SYSTEM 'schedule.dtd'>
+
+
 <daysinweek>
     <days name="mon"> 
         <info>
