@@ -22,6 +22,9 @@ and open the template in the editor.
 <!ELEMENT classperiod (info)>
 
 <!ELEMENT info (day, time, courseno, instructor, room)>
+<!ATTLIST info
+    type (lab|lec) #REQUIRED
+>
 
 <!--A day determines the day of the week -->
 <!ELEMENT day (#PCDATA)>
@@ -37,9 +40,6 @@ and open the template in the editor.
 
 <!-- CourseNo is predetermined and unique for all courses -->
 <!ELEMENT courseno (#PCDATA)>
-<!ATTLIST
-    type (lab|lec) #REQUIRED
->
 
 <!-- Instructors teaching courses. Can be same or different for various classes -->
 <!ELEMENT instructor (#PCDATA)>
