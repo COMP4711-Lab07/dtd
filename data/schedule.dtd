@@ -12,28 +12,35 @@ and open the template in the editor.
 -->
 
 <!-- A schedule defines the day, time, course, instructor, and room  -->
-<!ELEMENT schedule (day+, time+, courseno, instructor+, room+)>
-<!ELEMENT dayofweek (time, courseno, room, instructor)>
-<!ELEMENT course (room, instructor, time, day)>
-<!ELEMENT classperiod (day, courseno, room, instructor)>
+<!ELEMENT schedule (days, period, course)>
+
+<!ELEMENT days (info)>
+<!ELEMENT course (info)>
+<!ATTLIST course 
+    type (lab|lec) #REQUIRED
+    id  (comp4932|comp4735|comp4995|comp4560|comp4711|blaw3600) #REQUIRED
+>
+<!ELEMENT classperiod (info)>
+
+<!ELEMENT info (day, time, courseno, instructor, room)>
 
 <!--A day determines the day of the week -->
-<!ELEMENT day(#PCDATA)>
+<!ELEMENT day (#PCDATA)>
 <!ATTLIST day
-    type    (u|m|t|w|t|f|s)
+    type    (mon|tue|wed|thu|fri|sat|sun) #REQUIRED
 >
 
 <!-- Time is flexible and can be set as any time of day -->
-<!ELEMENT time(#PCDATA)>
-
-<!-- CourseNo is predetermined and unique for all courses -->
-<!ELEMENT courseno(#PCDATA)>
-<!ATTLIST courseno
-    type    (lecture|lab)
+<!ELEMENT time (#PCDATA)>
+<!ATTLIST time
+    block   (830|930|1030|1130|1230|1330|1430|1530|1630) #REQUIRED
 >
 
+<!-- CourseNo is predetermined and unique for all courses -->
+<!ELEMENT courseno (#PCDATA)>
+
 <!-- Instructors teaching courses. Can be same or different for various classes -->
-<!ELEMENT instructor(#PCDATA)>
+<!ELEMENT instructor (#PCDATA)>
 
 <!-- Room where the lecture takes place. Defined as building-roomNo -->
-<!ELEMENT room(#PCDATA)>
+<!ELEMENT room (#PCDATA)>
