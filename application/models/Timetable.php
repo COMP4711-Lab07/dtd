@@ -2,6 +2,9 @@
 
 class Timetable extends CI_Model {
     protected $xml = null;
+    protected $daybookings = array();
+    protected $periodbookings = array();
+    protected $coursebookings = array();
     
     
     public function __construct() {
@@ -10,10 +13,8 @@ class Timetable extends CI_Model {
         
         /// Getting data for days_of_week.xml
         foreach($this->xml->daysinweek as $days_in_week) {
-            foreach($days_in_week->days as $days) {
-                foreach($days->info as $info) {
-                    
-                }
+            foreach($days_in_week->days as $day) {
+                $this->daybookings[] = new Booking($day, $days_in_week);
             }
         }
         
@@ -21,9 +22,7 @@ class Timetable extends CI_Model {
         /// Getting data for class_period.xml
         foreach($this->xml->classperiod as $classperiod) {
             foreach($classperiod->period as $period) {
-                foreach($period->info as $info) {
-                    
-                }
+                $this->periodbookings[] = new Booking($period, $classperiod);
             }
         }
         
@@ -31,13 +30,56 @@ class Timetable extends CI_Model {
         /// Getting data for course.xml
         foreach($this->xml->courses as $courses) {
             foreach($courses->course as $couse) {
-                foreach($course->info as $info) {
-                    
-                }
+                $this->coursebooking[] = new Booking($course, $courses);
             }
         }
+    }
+    
+    public function getOutput($block, $weekday) {
         
     }
     
+    public function getPeriod($block) {
+        if(isset($this->$periodbookings[$block]))
+            return $this->courses[$block];
+        else
+            return null;
+    }
+    
+    public function getDay() {
+        
+    }
+
+    public function getCourses() {
+        
+    }
+    
+    public function searchByTime() {
+        
+    }
+    
+    public function searchByCourse() {
+        
+    }
+    
+    public function searchByDay() {
+        
+    }
+}
+
+class Booking {
+    public $room;
+    public $day;
+    public $time;
+    public $instructor;
+    public $course;
+    
+    public function __construct($details, $container) {
+        $this->room = (string) $details->room;
+        $this->instructor = (string) $details->instructor;
+        $this->course = (string) $details->courseno;
+        $this->day = (string) $details->day;
+        $this->time = (string) $details->time;
+    }
 }
 
