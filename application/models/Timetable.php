@@ -36,6 +36,12 @@ class Timetable extends CI_Model {
     }
     
     public function getOutput($block, $weekday) {
+        $results = search($block, $weekday);
+        if(isset($results)) {
+            
+        }  else {
+            return null;
+        }
         
     }
     
@@ -54,15 +60,7 @@ class Timetable extends CI_Model {
         
     }
     
-    public function searchByTime() {
-        
-    }
-    
-    public function searchByCourse() {
-        
-    }
-    
-    public function searchByDay() {
+    public function search($block, $weekday) {
         
     }
 }
