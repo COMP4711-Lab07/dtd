@@ -83,6 +83,26 @@ class Timetable extends CI_Model {
         }
         return null;
     }
+    
+    public function getDayBookings() {
+        return $this->daybookings;
+    }
+    
+    public function getCourseBookings() {
+        return $this->coursebookings;
+    }
+    
+    public function getPeriodBookings() {
+        return $this->periodbookings;
+    }
+    
+    public function getDayCode() {
+        return $this->daycode;
+    }
+    
+    public function getTimeslot() {
+        return $this->timeslot;
+    }
 }
 
 class Booking {
