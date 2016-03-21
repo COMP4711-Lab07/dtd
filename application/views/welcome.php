@@ -20,6 +20,25 @@
   <input type="submit" value="Submit">
 </form>
 
+<table>
+    <tr>
+        <td>Course</td>
+        <td>Day</td>
+        <td>Time</td>
+        <td>Instructor</td>
+        <td>Room</td>
+    </tr>
+    {daybookings}
+    <tr>
+        <td>{courseno}</td>
+        <td>{day}</td>
+        <td>{time}</td>
+        <td>{instructor}</td>
+        <td>{room}</td>
+    </tr>
+    {/daybookings}
+</table>
+
 <br/>
 {schedule}
     <a href="">{filename}</a>
