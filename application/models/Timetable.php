@@ -44,8 +44,8 @@ class Timetable extends CI_Model {
     
     public function getFromPeriod($block, $weekday) {        
         $results = array();
-        foreach($this->periodbookings as $temp) {
-            if(($temp->getBlock() == $block) && (($temp->getDay() == $weekday)))
+        foreach($this->periodbookings[] as $temp) {
+            if(($temp->getBlock() == $block) && (($temp->getWeekday() == $weekday)))
                 $results[] = $temp;
         }
         return $results;
@@ -53,8 +53,9 @@ class Timetable extends CI_Model {
     
     public function getFromDay($block, $weekday) {
         $results = array();
-        foreach($this->daybookings as $temp) {
-            if(($temp->getBlock() == $block) && (($temp->getDay() == $weekday)))
+
+        foreach($this->daybookings[] as $temp) {
+            if(($temp->getBlock() == $block) && (($temp->getWeekday() == $weekday)))
                 $results[] = $temp;
         }
         return $results;
@@ -62,8 +63,9 @@ class Timetable extends CI_Model {
     
     public function getFromCourses($block, $weekday) {
         $results = array();
-        foreach($this->coursebookings as $temp) {
-            if(($temp->getBlock() == $block) && (($temp->getDay() == $weekday)))
+
+        foreach($this->coursebookings[] as $temp) {
+            if(($temp->getBlock() == $block) && (($temp->getWeekday() == $weekday)))
                 $results[] = $temp;
         }
         return $results;
@@ -111,7 +113,9 @@ class Booking {
     public $time;
     public $instructor;
     public $courseno;
+    
     public $block;
+    public $weekday;
     
     public function __construct($details) {
         $this->room = (string) $details->room;
@@ -120,9 +124,8 @@ class Booking {
         $this->day = (string) $details->day;
         $this->time = (string) $details->time;
         
-        $tokens = explode(" ", $this->time);
-        
-        $this->block = $tokens[0];
+        $this->block = (string) $details->time['block'];
+        $this->weekday = (string) $details->day['name'];
     }
     
     public function getRoom() {
@@ -148,5 +151,8 @@ class Booking {
     public function getBlock() {
         return $this->block;
     }
+    
+    public function getWeekday() {
+        return $this->weekday;
+    }
 }
-
