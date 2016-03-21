@@ -44,7 +44,7 @@ class Timetable extends CI_Model {
     
     public function getFromPeriod($block, $weekday) {        
         $results = array();
-        foreach($this->periodbookings[] as $temp) {
+        foreach($this->periodbookings as $temp) {
             if(($temp->getBlock() == $block) && (($temp->getDay() == $weekday)))
                 $results[] = $temp;
         }
@@ -53,16 +53,16 @@ class Timetable extends CI_Model {
     
     public function getFromDay($block, $weekday) {
         $results = array();
-        foreach($this->daybookings[] as $temp) {
+        foreach($this->daybookings as $temp) {
             if(($temp->getBlock() == $block) && (($temp->getDay() == $weekday)))
                 $results[] = $temp;
         }
         return $results;
     }
-
+    
     public function getFromCourses($block, $weekday) {
         $results = array();
-        foreach($this->coursebookings[] as $temp) {
+        foreach($this->coursebookings as $temp) {
             if(($temp->getBlock() == $block) && (($temp->getDay() == $weekday)))
                 $results[] = $temp;
         }
