@@ -10,15 +10,15 @@ and open the template in the editor.
 <classperiod>
     <period time="830">
         <info>
-            <day type="mon"></day>
+            <day type="mon">Monday</day>
             <time block="830">8:30 to 11:20</time>
             <courseno type="lab">COMP4932</courseno>
             <instructor>Dennis Richards</instructor>  
-            <room>SE12-308</room>
+            <room>se12-308</room>
         </info>  
         
         <info>
-            <day type="wed"></day>
+            <day type="wed">Wednesday</day>
             <time block="830">8:30 to 10:30</time>
             <courseno type="lab">COMP4735</courseno>
             <instructor>Matthew Linder</instructor>
@@ -26,7 +26,7 @@ and open the template in the editor.
         </info>
         
         <info>
-            <day type="thu"></day>
+            <day type="thu">Thursday</day>
             <time block="830">8:30 to 10:30</time>
             <courseno type="lec">BLAW3600</courseno>
             <instructor>Catherine Ryan</instructor>
@@ -41,7 +41,7 @@ and open the template in the editor.
             <time block="930">9:30 to 11:20</time>
             <courseno type="lab">COMP4560</courseno>
             <instructor>Brenda Fine</instructor>
-            <room>SE12-320</room> 
+            <room>se12-320</room> 
         </info>
     </period>
     
