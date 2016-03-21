@@ -20,7 +20,7 @@
   <input type="submit" value="Submit">
 </form>
 
-<table>
+<table border="1">
     <tr>
         <td>Course</td>
         <td>Day</td>
