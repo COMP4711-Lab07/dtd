@@ -42,62 +42,56 @@ class Timetable extends CI_Model {
          
     }
     
-    public function getOutput($block, $weekday) {
-        $results = search($block, $weekday);
-        if(isset($results)) {
-            
-        }  else {
-            return null;
+    public function getFromPeriod($block, $weekday) {        
+        $results = array();
+        foreach($this->periodbookings[] as $temp) {
+            if(($temp->getBlock() == $block) && (($temp->getDay() == $weekday)))
+                $results[] = $temp;
         }
-        
+        return $results;
     }
     
-    public function getPeriod($block) {
-        if(isset($this->$periodbookings[$block]))
-            return $this->courses[$block];
-        else
-            return null;
+    public function getFromDay($block, $weekday) {
+        $results = array();
+        foreach($this->daybookings[] as $temp) {
+            if(($temp->getBlock() == $block) && (($temp->getDay() == $weekday)))
+                $results[] = $temp;
+        }
+        return $results;
     }
-    
-    public function getDay() {
-        
-    }
-    public function getCourses() {
-        
+
+    public function getFromCourses($block, $weekday) {
+        $results = array();
+        foreach($this->coursebookings[] as $temp) {
+            if(($temp->getBlock() == $block) && (($temp->getDay() == $weekday)))
+                $results[] = $temp;
+        }
+        return $results;
     }
     
     public function search($block, $weekday) {
+        $dayResults = getFromDay($block, $weekday);
+        $periodResults = getFromPeriod($block, $weekday);
+        $courseResults = getFromCourse($block, $weekday);
         
+        sort($dayResults);
+        sort($periodResults);
+        sort($courseResults);
+        
+        if(($dayResults == $periodResults) && ($periodResults == $courseResults)) {
+            return $dayResults;
+        }
+        return null;
     }
-    
-    public function getDayBookings() {
-        return $this->daybookings;
-    }
-    
-    public function getCourseBookings() {
-        return $this->coursebookings;
-    }
-    
-    public function getPeriodBookings() {
-        return $this->periodbookings;
-    }
-    
-    public function getDayCode() {
-        return $this->daycode;
-    }
-    
-    public function getTimeslot() {
-        return $this->timeslot;
-    }
-    
-    
 }
+
 class Booking {
     public $room;
     public $day;
     public $time;
     public $instructor;
     public $courseno;
+    public $block;
     
     public function __construct($details) {
         $this->room = (string) $details->room;
@@ -105,5 +99,34 @@ class Booking {
         $this->courseno = (string) $details->courseno;
         $this->day = (string) $details->day;
         $this->time = (string) $details->time;
+        
+        $tokens = explode(" ", $this->time);
+        
+        $this->block = $tokens[0];
+    }
+    
+    public function getRoom() {
+        return $this->room;
+    }
+    
+    public function getDay() {
+        return $this->day;
+    }
+    
+    public function getTime() {
+        return $this->time;
+    }
+    
+    public function getInstructor() {
+        return $this->instructor;
+    }
+    
+    public function getCourse() {
+        return $this->courseno;
+    }
+    
+    public function getBlock() {
+        return $this->block;
     }
 }
+
