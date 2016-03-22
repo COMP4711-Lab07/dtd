@@ -11,14 +11,14 @@ and open the template in the editor.
     <course id="comp4932">
         <info>
             <day type="mon">Monday</day>
-            <time block="830">830</time>
+            <time block="830">8:30 to 11:20</time>
             <courseno type="lab" >COMP4932</courseno>
             <instructor>Dennis Richards</instructor>
             <room>se12-308</room> 
         </info>
         <info>
             <day type="tue">Tuesday</day>
-            <time block="1530">1530</time>
+            <time block="1530">15:30 to 17:20</time>
             <courseno type="lec" >COMP4932</courseno>
             <instructor>Dennis Richards</instructor>
             <room>se12-308</room> 
@@ -28,21 +28,21 @@ and open the template in the editor.
     <course id="comp4995">
         <info>
             <day type="mon">Monday</day>
-            <time block="1430">1430</time>
+            <time block="1430">14:30 to 17:20</time>
             <courseno type="lab">COMP4995</courseno>
             <instructor>Dennis Richards</instructor>
             <room>se12-308</room> 
         </info>
         <info>
             <day type="wed">Wednesday</day>
-            <time block="1030">1030</time>
+            <time block="1030">10:30 to 11:20</time>
             <courseno type="lec" >COMP4995</courseno>
             <instructor>Dennis Richards</instructor>
             <room>se12-308</room> 
         </info>
         <info>
             <day type="wed">Wednesday</day>
-            <time block="1130">1130</time>
+            <time block="1130">11:30 to 12:20</time>
             <courseno type="lab" >COMP4995</courseno>
             <instructor>Dennis Richards</instructor>
             <room>se12-308</room> 
@@ -52,28 +52,28 @@ and open the template in the editor.
     <course id="comp4735">
         <info>
             <day type="mon">Monday</day>
-            <time block="1130">1130</time>
+            <time block="1130">11:30 to 12:20</time>
             <courseno type="lec">COMP4735</courseno>
             <instructor>Mirela Gutica</instructor>
             <room>sw1-1205</room> 
         </info>
         <info>
             <day type="wed">Wednesday</day>
-            <time block="830">830</time>
+            <time block="830">8:30 to 10:20</time>
             <courseno type="lab">COMP4735</courseno>
             <instructor>Matthew Linder</instructor>
             <room>se12-308</room> 
         </info>
         <info>
             <day type="wed">Wednesday</day>
-            <time block="1330">1330</time>
+            <time block="1330">13:30 to 14:20</time>
             <courseno type="lec">COMP4735</courseno>
             <instructor>Mirela Gutica</instructor>
             <room>sw1-1205</room> 
         </info>
         <info>
             <day type="thu">Thursday</day>
-            <time block="1130">1130</time>
+            <time block="1130">11:30 to 12:20</time>
             <courseno type="lec">COMP4735</courseno>
             <instructor>Mirela Gutica</instructor>
             <room>sw3-1710</room> 
@@ -83,21 +83,21 @@ and open the template in the editor.
     <course id="comp4560">
         <info>
             <day type="tue">Tuesday</day>
-            <time block="930">930</time>
+            <time block="930">9:30 to 11:20</time>
             <courseno type="lab">COMP4560</courseno>
             <instructor>Brenda Fine</instructor>
             <room>se12-320</room> 
         </info>
         <info>
             <day type="tue">Tuesday</day>
-            <time block="1130">1130</time>
+            <time block="1130">11:30 to 12:20</time>
             <courseno type="lec">COMP4560</courseno>
             <instructor>Brenda Fine</instructor>
             <room>sw5-1850</room> 
         </info>
         <info>
             <day type="fri">Friday</day>
-            <time block="1230">1230</time>
+            <time block="1230">12:30 to 1:20</time>
             <courseno type="lec">COMP4560</courseno>
             <instructor>Brenda Fine</instructor>
             <room>sw3-1750</room> 
@@ -107,14 +107,14 @@ and open the template in the editor.
     <course id="comp4711">
         <info>
             <day type="tue">Tuesday</day>
-            <time block="1430">1430</time>
+            <time block="1430">14:30 to 15:20</time>
             <courseno type="lec">COMP4711</courseno>
             <instructor>James Perry</instructor>
             <room>sw5-1840</room> 
         </info>
         <info>
             <day type="thu">Thursday</day>
-            <time block="1530">1530</time>
+            <time block="1530">15:30 to 17:20</time>
             <courseno type="lab">COMP4711</courseno>
             <instructor>James Perry</instructor>
             <room>se12-310</room> 
@@ -124,14 +124,14 @@ and open the template in the editor.
     <course id="blaw3600">
         <info>
             <day type="thu">Thursday</day>
-            <time block="1330">1330</time>
+            <time block="1330">13:30 to 15:20</time>
             <courseno type="lab">BLAW3600</courseno>
             <instructor>Catherine Ryan</instructor>
             <room>sw3-4725</room> 
         </info>
         <info>
             <day type="fri">Friday</day>
-            <time block="830">830</time>
+            <time block="830">8:30 to 10:20</time>
             <courseno type="lec">BLAW3600</courseno>
             <instructor>Catherine Ryan</instructor>
             <room>sw5-1840</room> 
