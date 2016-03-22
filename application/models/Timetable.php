@@ -70,9 +70,9 @@ class Timetable extends CI_Model {
     }
     
     public function search($block, $weekday) {
-        $dayResults = getFromDay($block, $weekday);
-        $periodResults = getFromPeriod($block, $weekday);
-        $courseResults = getFromCourse($block, $weekday);
+        $dayResults = $this->getFromDay($block, $weekday);
+        $periodResults = $this->getFromPeriod($block, $weekday);
+        $courseResults = $this->getFromCourses($block, $weekday);
         
         sort($dayResults);
         sort($periodResults);
