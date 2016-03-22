@@ -28,7 +28,7 @@ class Welcome extends Application {
         
         $this->getSetDaysCode();
         $this->getSetTimeslot();
-        /*
+        
         if(isset($_POST["submit"])) {
             $search_block = $_POST["time"];
             $search_day = $_POST["day"];
@@ -36,14 +36,15 @@ class Welcome extends Application {
             $this->search($search_block, $search_day);
             //$this->data['search_result'] = $this->timetable->getPeriodBookings();
         } else {
-           
+            /*
+            $this->data['daybookings'] = $this->timetable->getDayBookings();
+            $this->data['periodbookings'] = $this->timetable->getPeriodBookings();
+            $this->data['coursebookings'] = $this->timetable->getCourseBookings();
+            */
             /// Rendering
             $this->data['pagebody'] = 'welcome';
             $this->render();
-        }*/
-        
-        $this->data['pagebody'] = 'welcome';
-            $this->render();
+        }
         
     }
     
