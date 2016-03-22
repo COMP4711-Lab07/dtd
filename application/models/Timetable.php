@@ -74,7 +74,7 @@ class Timetable extends CI_Model {
         $periodResults = $this->getFromPeriod($block, $weekday);
         $courseResults = $this->getFromCourses($block, $weekday);
                 
-        if(array_diff_assoc($dayResults, $periodResults, $courseResults) == null) {
+        if($dayResults == $periodResults && $courseResults == $periodResults) {
             return $dayResults;
         }
         return null;
@@ -118,7 +118,7 @@ class Booking {
         $this->time = (string) $details->time;
         
         $this->block = (string) $details->time['block'];
-        $this->weekday = (string) $details->day['name'];
+        $this->weekday = (string) $details->day['type'];
     }
     
     public function getRoom() {
