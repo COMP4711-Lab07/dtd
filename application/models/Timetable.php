@@ -44,8 +44,8 @@ class Timetable extends CI_Model {
     
     public function getFromPeriod($block, $weekday) {        
         $results = array();
-        foreach($this->periodbookings[] as $temp) {
-            if(($temp->getBlock() == $block) && (($temp->getWeekday() == $weekday)))
+        foreach($this->periodbookings as $temp) {
+            if(($temp->getBlock() == $block) && (($temp->getDay() == $weekday)))
                 $results[] = $temp;
         }
         return $results;
@@ -53,9 +53,8 @@ class Timetable extends CI_Model {
     
     public function getFromDay($block, $weekday) {
         $results = array();
-
-        foreach($this->daybookings[] as $temp) {
-            if(($temp->getBlock() == $block) && (($temp->getWeekday() == $weekday)))
+        foreach($this->daybookings as $temp) {
+            if(($temp->getBlock() == $block) && (($temp->getDay() == $weekday)))
                 $results[] = $temp;
         }
         return $results;
@@ -63,18 +62,17 @@ class Timetable extends CI_Model {
     
     public function getFromCourses($block, $weekday) {
         $results = array();
-
-        foreach($this->coursebookings[] as $temp) {
-            if(($temp->getBlock() == $block) && (($temp->getWeekday() == $weekday)))
+        foreach($this->coursebookings as $temp) {
+            if(($temp->getBlock() == $block) && (($temp->getDay() == $weekday)))
                 $results[] = $temp;
         }
         return $results;
     }
     
     public function search($block, $weekday) {
-        $dayResults = getFromDay($block, $weekday);
-        $periodResults = getFromPeriod($block, $weekday);
-        $courseResults = getFromCourse($block, $weekday);
+        $dayResults = $this->getFromDay($block, $weekday);
+        $periodResults = $this->getFromPeriod($block, $weekday);
+        $courseResults = $this->getFromCourses($block, $weekday);
         
         sort($dayResults);
         sort($periodResults);
@@ -113,9 +111,7 @@ class Booking {
     public $time;
     public $instructor;
     public $courseno;
-    
     public $block;
-    public $weekday;
     
     public function __construct($details) {
         $this->room = (string) $details->room;
@@ -124,8 +120,9 @@ class Booking {
         $this->day = (string) $details->day;
         $this->time = (string) $details->time;
         
-        $this->block = (string) $details->time['block'];
-        $this->weekday = (string) $details->day['name'];
+        $tokens = explode(" ", $this->time);
+        
+        $this->block = $tokens[0];
     }
     
     public function getRoom() {
@@ -151,8 +148,5 @@ class Booking {
     public function getBlock() {
         return $this->block;
     }
-    
-    public function getWeekday() {
-        return $this->weekday;
-    }
 }
+
