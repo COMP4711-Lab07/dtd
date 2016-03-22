@@ -35,12 +35,9 @@ class Welcome extends Application {
             
             $this->search($search_block, $search_day);
             //$this->data['search_result'] = $this->timetable->getPeriodBookings();
+            //$this->data['pagebody'] = 'welcome';
+            //$this->render();
         } else {
-            /*
-            $this->data['daybookings'] = $this->timetable->getDayBookings();
-            $this->data['periodbookings'] = $this->timetable->getPeriodBookings();
-            $this->data['coursebookings'] = $this->timetable->getCourseBookings();
-            */
             /// Rendering
             $this->data['pagebody'] = 'welcome';
             $this->render();
